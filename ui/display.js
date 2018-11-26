@@ -67,12 +67,15 @@ function display(file_name) {
         .append("path")
         .attr("d", d3.symbol().size(function(d) {  
             if (d.rank == "1") { return 500; }
-            else if  (d.rank == "2") { return 400; }
-            else if  (d.rank == "3") { return 300; }
-            else if  (d.rank == "4") { return 200; }
+            else if  (d.rank == "2") { return 300; }
+            else if  (d.rank == "3") { return 200; }
+            else if  (d.rank == "4") { return 150; }
             else { return 100; }
           }).type(d3.symbolStar))
-        .attr("fill", function(d) { return d.colour; })
+        .attr("fill", function(d) { 
+          if (d.rank == "0") {return "black"}
+          else { return d.colour; }
+        })
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
