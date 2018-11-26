@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "colour": "red",
+      "id": "Catch Me If You Can - f1"
+    },
+    {
+      "colour": "green",
+      "id": "Steven Spielberg - d1"
+    },
+    {
+      "colour": "yellow",
+      "id": "Leonardo DiCaprio - a3"
+    },
+    {
+      "colour": "yellow",
+      "id": "Tom Hanks - a1"
+    },
+    {
+      "colour": "blue",
+      "id": "Biography - g2"
+    },
+    {
+      "colour": "blue",
+      "id": "Drama - g3"
+    },
+    {
+      "colour": "red",
+      "id": "Moulin Rouge! - f2"
+    },
+    {
+      "colour": "green",
+      "id": "Baz Luhrmann - d2"
+    },
+    {
+      "colour": "yellow",
+      "id": "Nicole Kidman - a2"
+    },
+    {
+      "colour": "blue",
+      "id": "Musical - g1"
+    }
+  ],
+  "links": [
+    {
+      "source": "Catch Me If You Can - f1",
+      "target": "Steven Spielberg - d1"
+    },
+    {
+      "source": "Catch Me If You Can - f1",
+      "target": "Leonardo DiCaprio - a3"
+    },
+    {
+      "source": "Catch Me If You Can - f1",
+      "target": "Tom Hanks - a1"
+    },
+    {
+      "source": "Catch Me If You Can - f1",
+      "target": "Biography - g2"
+    },
+    {
+      "source": "Catch Me If You Can - f1",
+      "target": "Drama - g3"
+    },
+    {
+      "source": "Moulin Rouge! - f2",
+      "target": "Baz Luhrmann - d2"
+    },
+    {
+      "source": "Moulin Rouge! - f2",
+      "target": "Nicole Kidman - a2"
+    },
+    {
+      "source": "Moulin Rouge! - f2",
+      "target": "Drama - g3"
+    },
+    {
+      "source": "Moulin Rouge! - f2",
+      "target": "Musical - g1"
+    }
+  ]
+}

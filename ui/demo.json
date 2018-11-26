@@ -1,0 +1,454 @@
+{
+  "nodes": [
+    {
+      "colour": "red",
+      "id": "The Terminal-tt0362227"
+    },
+    {
+      "colour": "green",
+      "id": "Steven Spielberg"
+    },
+    {
+      "colour": "yellow",
+      "id": "Tom Hanks"
+    },
+    {
+      "colour": "yellow",
+      "id": "Catherine Zeta-Jones"
+    },
+    {
+      "colour": "yellow",
+      "id": "Stanley Tucci"
+    },
+    {
+      "colour": "yellow",
+      "id": "Chi McBride"
+    },
+    {
+      "colour": "yellow",
+      "id": "Diego Luna"
+    },
+    {
+      "colour": "blue",
+      "id": "Comedy"
+    },
+    {
+      "colour": "blue",
+      "id": "Drama"
+    },
+    {
+      "colour": "blue",
+      "id": "Romance"
+    },
+    {
+      "colour": "red",
+      "id": "Eternal Sunshine of the Spotless Mind-tt0338013"
+    },
+    {
+      "colour": "green",
+      "id": "Michel Gondry"
+    },
+    {
+      "colour": "yellow",
+      "id": "Jim Carrey"
+    },
+    {
+      "colour": "yellow",
+      "id": "Kate Winslet"
+    },
+    {
+      "colour": "yellow",
+      "id": "Elijah Wood"
+    },
+    {
+      "colour": "yellow",
+      "id": "Mark Ruffalo"
+    },
+    {
+      "colour": "yellow",
+      "id": "Jane Adams"
+    },
+    {
+      "colour": "yellow",
+      "id": "Kirsten Dunst"
+    },
+    {
+      "colour": "yellow",
+      "id": "Tom Wilkinson"
+    },
+    {
+      "colour": "blue",
+      "id": "Sci-Fi"
+    },
+    {
+      "colour": "yellow",
+      "id": "Laura Linney"
+    },
+    {
+      "colour": "blue",
+      "id": "Crime"
+    },
+    {
+      "colour": "blue",
+      "id": "Thriller"
+    },
+    {
+      "colour": "red",
+      "id": "21 Grams-tt0315733"
+    },
+    {
+      "colour": "green",
+      "id": "Alejandro González Iñárritu"
+    },
+    {
+      "colour": "yellow",
+      "id": "Sean Penn"
+    },
+    {
+      "colour": "yellow",
+      "id": "Naomi Watts"
+    },
+    {
+      "colour": "yellow",
+      "id": "Benicio Del Toro"
+    },
+    {
+      "colour": "red",
+      "id": "Finding Neverland-tt0308644"
+    },
+    {
+      "colour": "green",
+      "id": "Marc Forster"
+    },
+    {
+      "colour": "yellow",
+      "id": "Johnny Depp"
+    },
+    {
+      "colour": "yellow",
+      "id": "Julie Christie"
+    },
+    {
+      "colour": "yellow",
+      "id": "Dustin Hoffman"
+    },
+    {
+      "colour": "yellow",
+      "id": "Kelly Macdonald"
+    },
+    {
+      "colour": "blue",
+      "id": "Biography"
+    },
+    {
+      "colour": "blue",
+      "id": "Family"
+    },
+    {
+      "colour": "red",
+      "id": "Catch Me If You Can-tt0264464"
+    },
+    {
+      "colour": "yellow",
+      "id": "Leonardo DiCaprio"
+    },
+    {
+      "colour": "yellow",
+      "id": "Christopher Walken"
+    },
+    {
+      "colour": "yellow",
+      "id": "Jennifer Garner"
+    },
+    {
+      "colour": "yellow",
+      "id": "Nicole Kidman"
+    },
+    {
+      "colour": "red",
+      "id": "Mystic River-tt0327056"
+    },
+    {
+      "colour": "green",
+      "id": "Clint Eastwood"
+    },
+    {
+      "colour": "yellow",
+      "id": "Tim Robbins"
+    },
+    {
+      "colour": "yellow",
+      "id": "Kevin Bacon"
+    },
+    {
+      "colour": "yellow",
+      "id": "Laurence Fishburne"
+    },
+    {
+      "colour": "yellow",
+      "id": "Emmy Rossum"
+    },
+    {
+      "colour": "blue",
+      "id": "Mystery"
+    },
+    {
+      "colour": "red",
+      "id": "The Interpreter-tt0373926"
+    },
+    {
+      "colour": "green",
+      "id": "Sydney Pollack"
+    },
+    {
+      "colour": "yellow",
+      "id": "Catherine Keener"
+    }
+  ],
+  "links": [
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Steven Spielberg"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Tom Hanks"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Catherine Zeta-Jones"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Stanley Tucci"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Chi McBride"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Diego Luna"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Comedy"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Drama"
+    },
+    {
+      "source": "The Terminal-tt0362227",
+      "target": "Romance"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Michel Gondry"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Jim Carrey"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Kate Winslet"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Elijah Wood"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Mark Ruffalo"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Jane Adams"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Kirsten Dunst"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Tom Wilkinson"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Drama"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Romance"
+    },
+    {
+      "source": "Eternal Sunshine of the Spotless Mind-tt0338013",
+      "target": "Sci-Fi"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Alejandro González Iñárritu"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Sean Penn"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Naomi Watts"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Benicio Del Toro"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Crime"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Drama"
+    },
+    {
+      "source": "21 Grams-tt0315733",
+      "target": "Thriller"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Marc Forster"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Johnny Depp"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Kate Winslet"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Julie Christie"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Dustin Hoffman"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Kelly Macdonald"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Biography"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Drama"
+    },
+    {
+      "source": "Finding Neverland-tt0308644",
+      "target": "Family"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Steven Spielberg"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Leonardo DiCaprio"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Tom Hanks"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Christopher Walken"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Jennifer Garner"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Biography"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Crime"
+    },
+    {
+      "source": "Catch Me If You Can-tt0264464",
+      "target": "Drama"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Clint Eastwood"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Sean Penn"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Tim Robbins"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Kevin Bacon"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Laurence Fishburne"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Laura Linney"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Emmy Rossum"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Crime"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Drama"
+    },
+    {
+      "source": "Mystic River-tt0327056",
+      "target": "Mystery"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Sydney Pollack"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Nicole Kidman"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Sean Penn"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Catherine Keener"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Crime"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Mystery"
+    },
+    {
+      "source": "The Interpreter-tt0373926",
+      "target": "Thriller"
+    }
+  ]
+}
