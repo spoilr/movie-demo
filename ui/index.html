@@ -17,6 +17,15 @@ text {
   font-size: 10px;
 }
 
+.feedback.ui-dialog {
+  font-family: Verdana,Arial,sans-serif;
+  font-size: .8em;
+}
+
+.ui-dialog > .ui-widget-header {
+  background: #8BC0F9;
+}
+
 </style>
 
 <div float="left">
@@ -35,34 +44,31 @@ display("demo_original.json");
 </div>
 
 <div class="submission" float="right">
-  <button id="recommend_button">Recommend me some movies</button>
-  <div id="dialog-confirm"></div>
+  <button id="recommend_button"><b>User to System:</b> Recommend me some movies</button>
+  <div id="feedback"></div>
 </div>
 
 <script type="text/javascript">
     document.getElementById("recommend_button").onclick = function () {
         d3.select("svg").selectAll("*").remove();
         display("demo.json");
-        var button = '<button id="interpreter_button" onclick="interpreter_function()">Why didn\'t you recommend "The Interpreter", I liked it</button>';
+        var button = '<button id="interpreter_button" onclick="interpreter_function()"><b>User to System:</b> Why didn\'t you recommend "The Interpreter", I liked it</button>';
         $(this).parent().append(button);
         var elem = document.getElementById('recommend_button');
         elem.parentNode.removeChild(elem);
     };
     function interpreter_function() {
-        $("#dialog-confirm").html("Similar users didn't like this film");
-          $("#dialog-confirm").dialog({
+        $("#feedback").html("Similar users didn't like this film");
+          $("#feedback").dialog({
+            dialogClass:"feedback",
             resizable: false,
             modal: true,
-            title: "Explanation",
+            title: "System to user:",
             height: 250,
             width: 400,
             buttons: {
               "OK": function() {
                 $(this).dialog('close');
-              },
-              "Don't change": function() {
-                $(this).dialog('close');
-                alert("Users who didn't like this film are not similar to me");
               },
               "Update": function() {
                 $(this).dialog('close');
@@ -71,26 +77,28 @@ display("demo_original.json");
                 display("demo_interpreter.json");
                 var elem = document.getElementById('interpreter_button');
                 elem.parentNode.removeChild(elem);
-                var button = '<button id="recommend_button">Recommend me some movies</button>';
+                var button = '<button id="recommend_button"><b>User to System:</b> Recommend me some movies</button>';
                 $(".submission").append(button);
                 document.getElementById("recommend_button").onclick = function () {
                   d3.select("svg").selectAll("*").remove();
                   display("demo_mystic.json");
-                  var button = '<button id="mystic_button" onclick="mystic_function()">Why "Mystic river"? I liked it</button>';
+                  var button = '<button id="mystic_button" onclick="mystic_function()"><b>User to System:</b> Indeed I liked "Mystic river" but why did you recommend it?</button>';
                   $(this).parent().append(button);
                   var elem = document.getElementById('recommend_button');
                   elem.parentNode.removeChild(elem);
                 };
+                alert("The Interpreter is ranked first now!");
               },
             }
           });
     }
     function mystic_function() {
-        $("#dialog-confirm").html("I thought you would like the acting, mostly since Sean Penn is in the film");
-          $("#dialog-confirm").dialog({
+        $("#feedback").html("I thought you would like the acting, mostly since Sean Penn is in the film");
+          $("#feedback").dialog({
+            dialogClass:"feedback",
             resizable: false,
             modal: true,
-            title: "Explanation",
+            title: "System to user:",
             height: 250,
             width: 400,
             buttons: {
@@ -104,16 +112,17 @@ display("demo_original.json");
                 display("demo_mystic.json");
                 var elem = document.getElementById('mystic_button');
                 elem.parentNode.removeChild(elem);
-                var button = '<button id="recommend_button">Recommend me some movies</button>';
+                var button = '<button id="recommend_button"><b>User to System:</b> Recommend me some movies</button>';
                 $(".submission").append(button);
                 document.getElementById("recommend_button").onclick = function () {
                   d3.select("svg").selectAll("*").remove();
                   display("demo_finding.json");
-                  var button = '<button id="finding_button" onclick="finding_function()">Why did you recommend Finding Neverland, I did not like it?</button>';
+                  var button = '<button id="finding_button" onclick="finding_function()"><b>User to System:</b> Why did you recommend Finding Neverland, I did not like it?</button>';
                   $(this).parent().append(button);
                   var elem = document.getElementById('recommend_button');
                   elem.parentNode.removeChild(elem);
                 };
+                alert("Mystic River is still ranked first!");
               },
             }
           });
@@ -122,11 +131,12 @@ display("demo_original.json");
 
     }
     function finding_function() {
-        $("#dialog-confirm").html("I thought you would like the genres of this film");
-          $("#dialog-confirm").dialog({
+        $("#feedback").html("I thought you would like the genres of this film");
+          $("#feedback").dialog({
+            dialogClass:"feedback",
             resizable: false,
             modal: true,
-            title: "Explanation",
+            title: "System to user:",
             height: 250,
             width: 400,
             buttons: {
@@ -147,11 +157,12 @@ display("demo_original.json");
 
 
     function finding_function_case1() {
-        $("#dialog-confirm").html("");
-          $("#dialog-confirm").dialog({
+        $("#feedback").html("");
+          $("#feedback").dialog({
+            dialogClass:"feedback",
             resizable: false,
             modal: true,
-            title: "",
+            title: "System to user:",
             height: 250,
             width: 400,
             buttons: {
@@ -159,16 +170,18 @@ display("demo_original.json");
                 $(this).dialog('close');
                 d3.select("svg").selectAll("*").remove();
                 display("demo_eternal.json");
+                alert("Eternal Sunshine of the Spotless Mind is ranked first now!");
               },
             }
           });
     }
     function finding_function_case2() {
-        $("#dialog-confirm").html("I thought you liked dramas because you liked Catch Me If You Can");
-          $("#dialog-confirm").dialog({
+        $("#feedback").html("I thought you liked dramas because you liked Catch Me If You Can");
+          $("#feedback").dialog({
+            dialogClass:"feedback",
             resizable: false,
             modal: true,
-            title: "",
+            title: "System to user:",
             height: 250,
             width: 400,
             buttons: {
@@ -177,11 +190,12 @@ display("demo_original.json");
               },
               "I changed my mind, I don't like Catch Me If You Can": function() {
                 $(this).dialog('close');
-                $("#dialog-confirm").html("");
-                $("#dialog-confirm").dialog({
+                $("#feedback").html("");
+                $("#feedback").dialog({
+                  dialogClass:"feedback",
                   resizable: false,
                   modal: true,
-                  title: "",
+                  title: "System to user:",
                   height: 250,
                   width: 400,
                   buttons: {
@@ -189,6 +203,7 @@ display("demo_original.json");
                       $(this).dialog('close');
                       d3.select("svg").selectAll("*").remove();
                       display("demo_eternal.json");
+                      alert("Eternal Sunshine of the Spotless Mind is ranked first now!");
                     },
                   }
                 });
