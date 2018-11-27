@@ -23,6 +23,9 @@ text {
 <svg width="800" height="600"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 <script src="display.js"></script>
 <script>
 
@@ -32,76 +35,166 @@ display("demo_original.json");
 </div>
 
 <div class="submission" float="right">
-  <button id="recommend_button">Recommend</button>
+  <button id="recommend_button">Recommend me some movies</button>
+  <div id="dialog-confirm"></div>
 </div>
 
 <script type="text/javascript">
     document.getElementById("recommend_button").onclick = function () {
         d3.select("svg").selectAll("*").remove();
         display("demo.json");
-        var button = '<button id="interpreter_button" onclick="interpreter_function()">Why not "The interpreter"? I liked it</button>';
+        var button = '<button id="interpreter_button" onclick="interpreter_function()">Why didn\'t you recommend "The Interpreter", I liked it</button>';
         $(this).parent().append(button);
         var elem = document.getElementById('recommend_button');
         elem.parentNode.removeChild(elem);
     };
     function interpreter_function() {
-        alert("Similar users");
-        alert("Reducing importance of similar users");
-        d3.select("svg").selectAll("*").remove();
-        display("demo_interpreter.json");
-        var elem = document.getElementById('interpreter_button');
-        elem.parentNode.removeChild(elem);
-        var button = '<button id="recommend_button">Recommend</button>';
-        $(".submission").append(button);
-        document.getElementById("recommend_button").onclick = function () {
-          d3.select("svg").selectAll("*").remove();
-          display("demo_mystic.json");
-          var button = '<button id="mystic_button" onclick="mystic_function()">Why "Mystic river"? I liked it</button>';
-          $(this).parent().append(button);
-          var elem = document.getElementById('recommend_button');
-          elem.parentNode.removeChild(elem);
-        };
+        $("#dialog-confirm").html("Similar users didn't like this film");
+          $("#dialog-confirm").dialog({
+            resizable: false,
+            modal: true,
+            title: "Explanation",
+            height: 250,
+            width: 400,
+            buttons: {
+              "OK": function() {
+                $(this).dialog('close');
+              },
+              "Don't change": function() {
+                $(this).dialog('close');
+                alert("Users who didn't like this film are not similar to me");
+              },
+              "Update": function() {
+                $(this).dialog('close');
+                alert("I don't care about similar users, reduce their importance");
+                d3.select("svg").selectAll("*").remove();
+                display("demo_interpreter.json");
+                var elem = document.getElementById('interpreter_button');
+                elem.parentNode.removeChild(elem);
+                var button = '<button id="recommend_button">Recommend me some movies</button>';
+                $(".submission").append(button);
+                document.getElementById("recommend_button").onclick = function () {
+                  d3.select("svg").selectAll("*").remove();
+                  display("demo_mystic.json");
+                  var button = '<button id="mystic_button" onclick="mystic_function()">Why "Mystic river"? I liked it</button>';
+                  $(this).parent().append(button);
+                  var elem = document.getElementById('recommend_button');
+                  elem.parentNode.removeChild(elem);
+                };
+              },
+            }
+          });
     }
     function mystic_function() {
-        alert("Sean Penn");
-        alert("Increasing importance of Sean Penn");
-        d3.select("svg").selectAll("*").remove();
-        display("demo_mystic.json");
-        var elem = document.getElementById('mystic_button');
-        elem.parentNode.removeChild(elem);
-        var button = '<button id="recommend_button">Recommend</button>';
-        $(".submission").append(button);
-        document.getElementById("recommend_button").onclick = function () {
-          d3.select("svg").selectAll("*").remove();
-          display("demo_finding.json");
-          var button = '<button id="finding_button" onclick="finding_function()">Why "Finding Neverland"? I did not like it</button>';
-          $(this).parent().append(button);
-          var elem = document.getElementById('recommend_button');
-          elem.parentNode.removeChild(elem);
-        };
+        $("#dialog-confirm").html("I thought you would like the acting, mostly since Sean Penn is in the film");
+          $("#dialog-confirm").dialog({
+            resizable: false,
+            modal: true,
+            title: "Explanation",
+            height: 250,
+            width: 400,
+            buttons: {
+              "OK": function() {
+                $(this).dialog('close');
+              },
+              "Update": function() {
+                $(this).dialog('close');
+                alert("This is true, I like Sean Penn");
+                d3.select("svg").selectAll("*").remove();
+                display("demo_mystic.json");
+                var elem = document.getElementById('mystic_button');
+                elem.parentNode.removeChild(elem);
+                var button = '<button id="recommend_button">Recommend me some movies</button>';
+                $(".submission").append(button);
+                document.getElementById("recommend_button").onclick = function () {
+                  d3.select("svg").selectAll("*").remove();
+                  display("demo_finding.json");
+                  var button = '<button id="finding_button" onclick="finding_function()">Why did you recommend Finding Neverland, I did not like it?</button>';
+                  $(this).parent().append(button);
+                  var elem = document.getElementById('recommend_button');
+                  elem.parentNode.removeChild(elem);
+                };
+              },
+            }
+          });
+
+
+
     }
     function finding_function() {
-        alert("2 use cases. Select");
-        var elem = document.getElementById('finding_button');
-        elem.parentNode.removeChild(elem);
-        var button_case1 = '<button id="finding_button_case1" onclick="finding_function_case1()">Why "Finding Neverland"? I did not like it Case1</button>';
-        $(".submission").append(button_case1);
-        var button_case2 = '<button id="finding_button_case2" onclick="finding_function_case2()">Why "Finding Neverland"? I did not like it Case2</button>';
-        $(".submission").append(button_case2);
+        $("#dialog-confirm").html("I thought you would like the genres of this film");
+          $("#dialog-confirm").dialog({
+            resizable: false,
+            modal: true,
+            title: "Explanation",
+            height: 250,
+            width: 400,
+            buttons: {
+              "OK": function() {
+                $(this).dialog('close');
+              },
+              "I don't care about the genre": function() {
+                $(this).dialog('close');
+                finding_function_case1()
+              },
+              "Update": function() {
+                $(this).dialog('close');
+                finding_function_case2()
+              },
+            }
+          });
     }
+
+
     function finding_function_case1() {
-        alert("Genre");
-        alert("If the Genre does not matter, decrease its importance");
-        d3.select("svg").selectAll("*").remove();
-        display("demo_eternal.json");
+        $("#dialog-confirm").html("");
+          $("#dialog-confirm").dialog({
+            resizable: false,
+            modal: true,
+            title: "",
+            height: 250,
+            width: 400,
+            buttons: {
+              "Update": function() {
+                $(this).dialog('close');
+                d3.select("svg").selectAll("*").remove();
+                display("demo_eternal.json");
+              },
+            }
+          });
     }
     function finding_function_case2() {
-        alert("Genre");
-        alert("Genre Drama");
-        alert("Because you rated \"Catch me if you can\" with 5 and it is a Drama");
-        alert("Updating rating for this film");
-        d3.select("svg").selectAll("*").remove();
-        display("demo_eternal.json");
+        $("#dialog-confirm").html("I thought you liked dramas because you liked Catch Me If You Can");
+          $("#dialog-confirm").dialog({
+            resizable: false,
+            modal: true,
+            title: "",
+            height: 250,
+            width: 400,
+            buttons: {
+              "OK": function() {
+                $(this).dialog('close');
+              },
+              "I changed my mind, I don't like Catch Me If You Can": function() {
+                $(this).dialog('close');
+                $("#dialog-confirm").html("");
+                $("#dialog-confirm").dialog({
+                  resizable: false,
+                  modal: true,
+                  title: "",
+                  height: 250,
+                  width: 400,
+                  buttons: {
+                    "Update": function() {
+                      $(this).dialog('close');
+                      d3.select("svg").selectAll("*").remove();
+                      display("demo_eternal.json");
+                    },
+                  }
+                });
+              },
+            }
+          });
     }
 </script>
 
