@@ -38,7 +38,7 @@ text {
 <script src="display.js"></script>
 <script>
 
-display("demo_original.json");
+display("netflix_original.json");
 
 </script>
 </div>
@@ -51,14 +51,15 @@ display("demo_original.json");
 <script type="text/javascript">
     document.getElementById("recommend_button").onclick = function () {
         d3.select("svg").selectAll("*").remove();
-        display("demo.json");
-        var button = '<button id="interpreter_button" onclick="interpreter_function()"><b>User to System:</b> Why didn\'t you recommend "The Interpreter", I liked it</button>';
+        alert("The Ballad Of Buster Scruggs is ranked 1st!");
+        display("netflix_ballad.json");
+        var button = '<button id="ballad_button" onclick="interaction_function()"><b>User to System:</b> Why did The Ballad Of Buster Scruggs obtain a 95% match percentage?</button>';
         $(this).parent().append(button);
         var elem = document.getElementById('recommend_button');
         elem.parentNode.removeChild(elem);
     };
-    function interpreter_function() {
-        $("#feedback").html("Similar users didn't like this film");
+    function interaction_function() {
+        $("#feedback").html("Because I thought you’d like the acting, mainly that of James Franco.");
           $("#feedback").dialog({
             dialogClass:"feedback",
             resizable: false,
@@ -67,130 +68,11 @@ display("demo_original.json");
             height: 250,
             width: 400,
             buttons: {
-              "OK": function() {
+              "Indeed, I like him!": function() { $(this).dialog('close'); },
+              "Actually, I don't like him.": function() { $(this).dialog('close'); },
+              "Why did you think I like him?": function() {
                 $(this).dialog('close');
-              },
-              "Update": function() {
-                $(this).dialog('close');
-                alert("I don't care about similar users, reduce their importance");
-                d3.select("svg").selectAll("*").remove();
-                display("demo_interpreter.json");
-                var elem = document.getElementById('interpreter_button');
-                elem.parentNode.removeChild(elem);
-                var button = '<button id="recommend_button"><b>User to System:</b> Recommend me some movies</button>';
-                $(".submission").append(button);
-                document.getElementById("recommend_button").onclick = function () {
-                  d3.select("svg").selectAll("*").remove();
-                  display("demo_mystic.json");
-                  var button = '<button id="mystic_button" onclick="mystic_function()"><b>User to System:</b> Indeed I liked "Mystic river" but why did you recommend it?</button>';
-                  $(this).parent().append(button);
-                  var elem = document.getElementById('recommend_button');
-                  elem.parentNode.removeChild(elem);
-                };
-                alert("The Interpreter is ranked first now!");
-              },
-            }
-          });
-    }
-    function mystic_function() {
-        $("#feedback").html("I thought you would like the acting, mostly since Sean Penn is in the film");
-          $("#feedback").dialog({
-            dialogClass:"feedback",
-            resizable: false,
-            modal: true,
-            title: "System to user:",
-            height: 250,
-            width: 400,
-            buttons: {
-              "OK": function() {
-                $(this).dialog('close');
-              },
-              "Update": function() {
-                $(this).dialog('close');
-                alert("This is true, I like Sean Penn");
-                d3.select("svg").selectAll("*").remove();
-                display("demo_mystic.json");
-                var elem = document.getElementById('mystic_button');
-                elem.parentNode.removeChild(elem);
-                var button = '<button id="recommend_button"><b>User to System:</b> Recommend me some movies</button>';
-                $(".submission").append(button);
-                document.getElementById("recommend_button").onclick = function () {
-                  d3.select("svg").selectAll("*").remove();
-                  display("demo_finding.json");
-                  var button = '<button id="finding_button" onclick="finding_function()"><b>User to System:</b> Why did you recommend Finding Neverland, I did not like it?</button>';
-                  $(this).parent().append(button);
-                  var elem = document.getElementById('recommend_button');
-                  elem.parentNode.removeChild(elem);
-                };
-                alert("Mystic River is still ranked first!");
-              },
-            }
-          });
-
-
-
-    }
-    function finding_function() {
-        $("#feedback").html("I thought you would like the genres of this film");
-          $("#feedback").dialog({
-            dialogClass:"feedback",
-            resizable: false,
-            modal: true,
-            title: "System to user:",
-            height: 250,
-            width: 400,
-            buttons: {
-              "OK": function() {
-                $(this).dialog('close');
-              },
-              "I don't care about the genre": function() {
-                $(this).dialog('close');
-                finding_function_case1()
-              },
-              "Update": function() {
-                $(this).dialog('close');
-                finding_function_case2()
-              },
-            }
-          });
-    }
-
-
-    function finding_function_case1() {
-        $("#feedback").html("");
-          $("#feedback").dialog({
-            dialogClass:"feedback",
-            resizable: false,
-            modal: true,
-            title: "System to user:",
-            height: 250,
-            width: 400,
-            buttons: {
-              "Update": function() {
-                $(this).dialog('close');
-                d3.select("svg").selectAll("*").remove();
-                display("demo_eternal.json");
-                alert("Eternal Sunshine of the Spotless Mind is ranked first now!");
-              },
-            }
-          });
-    }
-    function finding_function_case2() {
-        $("#feedback").html("I thought you liked dramas because you liked Catch Me If You Can");
-          $("#feedback").dialog({
-            dialogClass:"feedback",
-            resizable: false,
-            modal: true,
-            title: "System to user:",
-            height: 250,
-            width: 400,
-            buttons: {
-              "OK": function() {
-                $(this).dialog('close');
-              },
-              "I changed my mind, I don't like Catch Me If You Can": function() {
-                $(this).dialog('close');
-                $("#feedback").html("");
+                $("#feedback").html("Because similar users liked 127 Hours, a movie in which he acted.");
                 $("#feedback").dialog({
                   dialogClass:"feedback",
                   resizable: false,
@@ -199,17 +81,47 @@ display("demo_original.json");
                   height: 250,
                   width: 400,
                   buttons: {
-                    "Update": function() {
+                    "Okay, thanks!": function() { $(this).dialog('close'); },
+                    "These users are not similar to me.": function() { $(this).dialog('close'); },
+                    "I don't care about similar users.": function() {
                       $(this).dialog('close');
+                      alert("Okay, updating your recommendations.")
                       d3.select("svg").selectAll("*").remove();
-                      display("demo_eternal.json");
-                      alert("Eternal Sunshine of the Spotless Mind is ranked first now!");
-                    },
-                  }
-                });
+                      display("netflix_arrival.json");
+                      alert("Arrival is now ranked 1st!");
+                      var button = '<button id="ballad_button" onclick="arrival_function()"><b>User to System:</b> I liked Arrival, why did you recommend it?</button>';
+                      $(".submission").append(button);
+                      var elem = document.getElementById('ballad_button');
+                      elem.parentNode.removeChild(elem);},
+                  },
+                })},
               },
-            }
-          });
+            })
+          };
+    
+    function arrival_function() {
+      $("#feedback").html("Because I thought you would like its genre Sci-Fi");
+      $("#feedback").dialog({
+        dialogClass:"feedback",
+        resizable: false,
+        modal: true,
+        title: "System to user:",
+        height: 250,
+        width: 400,
+        buttons: {
+          "Indeed, I like Sci-Fi movies!!": function() {
+            $(this).dialog('close');
+            alert("Okay, updating your recommendations.")
+            d3.select("svg").selectAll("*").remove();
+            display("netflix_cloverfield.json");
+            alert("The Cloverfield Paradox is now ranked 1st!");
+            var elem = document.getElementById('ballad_button');
+            elem.parentNode.removeChild(elem);},
+          "Actually I don't like Sci-Fi movies": function() { $(this).dialog('close');}}
+      })
     }
+
+
+
 </script>
 

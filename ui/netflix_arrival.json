@@ -1,0 +1,248 @@
+{
+  "nodes": [
+    {
+      "colour": "red",
+      "id": "The Cloverfield Paradox",
+      "rank": "0"
+    },
+    {
+      "colour": "green",
+      "id": "Julius Onah"
+    },
+    {
+      "colour": "yellow",
+      "id": "David Oyelowo"
+    },
+    {
+      "colour": "yellow",
+      "id": "Gugu Mbatha-Raw"
+    },
+    {
+      "colour": "yellow",
+      "id": "Daniel Bruhl"
+    },
+    {
+      "colour": "yellow",
+      "id": "Elizabeth Debicki"
+    },
+    {
+      "colour": "blue",
+      "id": "Mystery & Suspense"
+    },
+
+
+
+    {
+      "colour": "red",
+      "id": "127 HOURS",
+      "rank": "0"
+    },
+    {
+      "colour": "green",
+      "id": "Danny Boyle"
+    },
+    {
+      "colour": "yellow",
+      "id": "James Franco"
+    },
+    {
+      "colour": "yellow",
+      "id": "Amber Tamblyn"
+    },
+    {
+      "colour": "yellow",
+      "id": "Kate Mara"
+    },
+    {
+      "colour": "yellow",
+      "id": "Clemence Poesy"
+    },
+    {
+      "colour": "blue",
+      "id": "Drama"
+    },
+
+
+
+    {
+      "colour": "red",
+      "id": "The Ballad of Buster Scruggs",
+      "rank": "4"
+    },
+    {
+      "colour": "green",
+      "id": "Joel Coen, Ethan Coen"
+    },
+    {
+      "colour": "yellow",
+      "id": "Liam Neeson"
+    },
+    {
+      "colour": "yellow",
+      "id": "Zoe Kazan"
+    },
+    {
+      "colour": "yellow",
+      "id": "Tom Waits"
+    },
+    {
+      "colour": "blue",
+      "id": "Western"
+    },
+
+
+
+    {
+      "colour": "red",
+      "id": "Arrival",
+      "rank": "1"
+    },
+    {
+      "colour": "green",
+      "id": "Denis Villeneuve"
+    },
+    {
+      "colour": "yellow",
+      "id": "Amy Adams"
+    },
+    {
+      "colour": "yellow",
+      "id": "Jeremy Renner"
+    },
+    {
+      "colour": "yellow",
+      "id": "Forest Whitaker"
+    },
+    {
+      "colour": "yellow",
+      "id": "Michael Stuhlbarg"
+    },
+    {
+      "colour": "blue",
+      "id": "SciFi"
+    }
+  ],
+  "links": [
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "Julius Onah"
+    },
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "David Oyelowo"
+    },
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "Gugu Mbatha-Raw"
+    },
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "Daniel Bruhl"
+    },
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "Elizabeth Debicki"
+    },
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "Mystery & Suspense"
+    },
+    {
+      "source": "The Cloverfield Paradox",
+      "target": "SciFi"
+    },
+
+
+
+    {
+      "source": "127 HOURS",
+      "target": "Danny Boyle"
+    },
+    {
+      "source": "127 HOURS",
+      "target": "James Franco"
+    },
+    {
+      "source": "127 HOURS",
+      "target": "Amber Tamblyn"
+    },
+    {
+      "source": "127 HOURS",
+      "target": "Kate Mara"
+    },
+    {
+      "source": "127 HOURS",
+      "target": "Clemence Poesy"
+    },
+    {
+      "source": "127 HOURS",
+      "target": "Drama"
+    },
+
+
+
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "Joel Coen, Ethan Coen"
+    },
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "James Franco"
+    },
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "Liam Neeson"
+    },
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "Zoe Kazan"
+    },
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "Tom Waits"
+    },
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "Drama"
+    },
+    {
+      "source": "The Ballad of Buster Scruggs",
+      "target": "Western"
+    },
+
+
+
+    {
+      "source": "Arrival",
+      "target": "Denis Villeneuve"
+    },
+    {
+      "source": "Arrival",
+      "target": "Amy Adams"
+    },
+    {
+      "source": "Arrival",
+      "target": "Jeremy Renner"
+    },
+    {
+      "source": "Arrival",
+      "target": "Forest Whitaker"
+    },
+    {
+      "source": "Arrival",
+      "target": "Michael Stuhlbarg"
+    },
+    {
+      "source": "Arrival",
+      "target": "Mystery & Suspense"
+    },
+    {
+      "source": "Arrival",
+      "target": "SciFi"
+    },
+    {
+      "source": "Arrival",
+      "target": "Drama"
+    }
+  ]
+}
